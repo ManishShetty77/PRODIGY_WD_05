@@ -1,0 +1,168 @@
+/* style.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('mountain.JPEG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+}
+
+main.container {
+  max-width: 520px;
+  margin: auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+input, select, button {
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  min-height: 44px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  margin-top: 0.3rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.weather {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  min-height: 140px;
+}
+
+img.weather-icon {
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+}
+
+/* Horizontal Scroll Forecast Container */
+.forecast-container {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.forecast-day {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 0.7rem;
+  min-width: 120px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  user-select: none;
+  scroll-snap-align: start;
+}
+
+.forecast-day img {
+  width: 48px;
+  height: 48px;
+  margin: 0.2rem 0;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffdddd;
+  background-color: rgba(255, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  justify-content: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Optional: Style the scrollbar */
+.forecast-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.forecast-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  main.container {
+    max-width: 90vw;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  main.container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  input, select, button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  img.weather-icon {
+    width: 40px;
+    height: 40px;
+  }
+}

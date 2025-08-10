@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AuraCast Weather</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" role="main" aria-label="Weather information section">
+    <h1>🌤️ AuraCast</h1>
+
+    <form id="weatherForm" aria-label="City weather search form">
+      <label for="cityInput">Enter City Name</label>
+      <input
+        type="text"
+        id="cityInput"
+        name="city"
+        placeholder="e.g. London"
+        aria-required="true"
+        autocomplete="off"
+      />
+
+      <label for="unitSelect">Select Temperature Unit</label>
+      <select id="unitSelect" aria-label="Select temperature unit">
+        <option value="metric" selected>Celsius (°C)</option>
+        <option value="imperial">Fahrenheit (°F)</option>
+      </select>
+
+      <button type="submit" aria-label="Search weather by city">Search</button>
+    </form>
+
+    <button
+      id="locationBtn"
+      aria-label="Get weather using your current location"
+      style="margin-top: 1rem;"
+    >
+      Use My Location
+    </button>
+
+    <div class="weather" id="weatherInfo" aria-live="polite" aria-atomic="true"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
