@@ -1,23 +1,23 @@
-/* style.css */
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url('mountain.JPEG');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: #fff;
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 body::before {
   content: '';
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
+  background: url('greenlight.gif') center center / cover no-repeat;
+  opacity: 1;
+  pointer-events: none;
 }
 
 main.container {
@@ -85,7 +85,6 @@ img.weather-icon {
   height: 60px;
 }
 
-/* Horizontal Scroll Forecast Container */
 .forecast-container {
   margin-top: 1rem;
   display: flex;
@@ -126,7 +125,6 @@ img.weather-icon {
   margin-top: 1rem;
 }
 
-/* Optional: Style the scrollbar */
 .forecast-container::-webkit-scrollbar {
   height: 8px;
 }
