@@ -1,6 +1,3 @@
-
-
-
 const API_KEY = '7a0f9133c04c8952c67fd2115ae54fa2';
 
 async function fetchWeather(url, showForecast = true) {
@@ -113,7 +110,6 @@ function displayError(message) {
   `;
 }
 
-// Event listeners for form submit and button click
 document.getElementById("weatherForm").addEventListener("submit", (e) => {
   e.preventDefault();
   getWeatherByCity();
